@@ -12,7 +12,7 @@ lof: yes
 geometry: [b5paper, tmargin=2.5cm, bmargin=2.5cm, lmargin=3.5cm, rmargin=2.5cm]
 site: bookdown::bookdown_site
 description: "R语言和统计学"
-github-repo: yihui/bookdown-chinese
+github-repo: likanzhan/probstatr
 #cover-image: images/cover.jpg
 ---
 
