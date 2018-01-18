@@ -6,7 +6,7 @@ bookdown::gitbook:
       before: |
         <li><a href="./">R语言与统计</a></li>
       after: |
-        <li><a href="https://bookdown.org" target="blank">本书用 bookdown 生成</a></li>
+        <li><a href="https://github.com/likanzhan" target="blank">Github</a></li>
     download: [pdf, epub]
     edit: https://github.com/likanzhan/probstatr/edit/master/%s
     sharing:
