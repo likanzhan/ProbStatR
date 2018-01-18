@@ -1,4 +1,4 @@
-book_filename: 行为科学统计学
+book_filename: probstatr
 clean: [packages.bib, bookdown.bbl]
 language:
   label:
