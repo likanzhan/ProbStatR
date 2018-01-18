@@ -1,3 +1,3 @@
 # Ongoing project
 
-This is an ongoing Chinese book introducing statistics and R to students.
+This is an ongoing Chinese book manuscript introducing statistics and R to students.
