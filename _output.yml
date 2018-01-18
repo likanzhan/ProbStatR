@@ -8,7 +8,7 @@ bookdown::gitbook:
       after: |
         <li><a href="https://bookdown.org" target="blank">本书用 bookdown 生成</a></li>
     download: [pdf, epub]
-    edit: https://github.com/yihui/bookdown-chinese/edit/master/%s
+    edit: https://github.com/likanzhan/probstatr/edit/master/%s
     sharing:
       github: yes
       facebook: no
