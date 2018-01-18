@@ -25,7 +25,7 @@
 \usepackage[unicode=true]{hyperref}
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \hypersetup{
-            pdftitle={行为科学统计学},
+            pdftitle={R语言和统计},
             pdfauthor={战立侃},
             colorlinks=true,
             linkcolor=Maroon,
@@ -159,7 +159,7 @@
 
 \frontmatter
 
-\title{行为科学统计学}
+\title{R语言和统计}
 \author{战立侃}
 \date{2018-01-18}
 
@@ -171,7 +171,7 @@
 \thispagestyle{empty}
 
 \begin{center}
-献给大巫、小巫、和阿毛
+谨以此书献给大巫、小巫、和阿毛。
 \end{center}
 
 \setlength{\abovedisplayskip}{-5pt}
@@ -186,81 +186,50 @@
 \chapter*{前言}
 
 
-你好，世界。我写了一本书。这本书是这样的，第 \ref{intro}
-章介绍了啥啥，第 \ref{wind} 章说了啥啥，然后是啥啥\ldots{}\ldots{}
+2018年，我立了一个大大的FLAG。我准备写一本书。这本书是关于R语言和统计学的。但是具体写什么，我还没有想好。例如，第
+\ref{intro} 章介绍了什么是统计学；第 \ref{wind}
+章介绍了描述统计中的集中量数和离散量数。
 
-我用了两个 R 包编译这本书，分别是 \textbf{knitr}\index{knitr}
-\citep{xie2015} 和 \textbf{bookdown}\index{bookdown}
-\citep{R-bookdown}。以下是我的 R 进程信息：
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{sessionInfo}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## R version 3.4.3 (2017-11-30)
-## Platform: x86_64-apple-darwin15.6.0 (64-bit)
-## Running under: macOS High Sierra 10.13.2
-## 
-## Matrix products: default
-## BLAS: /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
-## LAPACK: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRlapack.dylib
-## 
-## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets 
-## [6] methods   base     
-## 
-## loaded via a namespace (and not attached):
-##  [1] compiler_3.4.3  backports_1.1.2 bookdown_0.5.15
-##  [4] magrittr_1.5    rprojroot_1.3-1 htmltools_0.3.6
-##  [7] tools_3.4.3     rstudioapi_0.7  yaml_2.1.16    
-## [10] Rcpp_0.12.14    stringi_1.1.6   rmarkdown_1.8  
-## [13] highr_0.6       knitr_1.18      stringr_1.2.0  
-## [16] digest_0.6.13   evaluate_0.10.1
-\end{verbatim}
+本书的主要参考书有：行为科学统计学
+\citep{RN154}、用R学习概率论和数理统计
+\citep{RN261}、应用回归分析和一般化线性模型 \citep{RN146}
 
 \section*{致谢}
 
 
-非常感谢谁谁以及谁谁对我的帮助。艾玛，要不是他们神一样的队友，我两年前就写完这本书了。
+非常感谢我的父母，我家的大巫、小巫、阿毛的一如寄望的支持。
 
 \BeginKnitrBlock{flushright}
-张三\\
-于 A 村某角落
+战立侃 于北京
 \EndKnitrBlock{flushright}
 
-\chapter*{作者简介}\label{author}
+\chapter*{关于作者}\label{author}
 
 
-上不了厅堂，下得了厨房。敲得了代码，逮得住蟑螂。
+战立侃，认知科学博士，北京语言大学助理研究员。
 
 \mainmatter
 
-\chapter{牛刀小试}\label{intro}
+\chapter{什么是统计学}\label{intro}
 
-现在我们可以试试 \textbf{bookdown} 的一些初级功能了，例如图表。图
-\ref{fig:hello} 是一幅无趣的散点图，表 \ref{tab:iris} 是一份枯燥的数据。
+我们为什需要统计学。
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(cars, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+请看图 \ref{fig:hello} ，它是一幅无趣的散点图，表 \ref{tab:iris}
+是一份枯燥的数据。
 
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{probstatr_files/figure-latex/hello-1} \caption{雷猴啊，散点图！}\label{fig:hello}
+
+{\centering \includegraphics[width=0.7\linewidth]{probstatr_files/figure-latex/hello-1} 
+
+}
+
+\caption{散点图}\label{fig:hello}
 \end{figure}
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris), }\DataTypeTok{caption =} \StringTok{'雷猴啊，iris 数据！'}\NormalTok{,}
+  \KeywordTok{head}\NormalTok{(iris), }\DataTypeTok{caption =} \StringTok{'数据表'}\NormalTok{,}
   \DataTypeTok{booktabs =} \OtherTok{TRUE}
 \NormalTok{)}
 \end{Highlighting}
@@ -268,7 +237,7 @@
 
 \begin{table}
 
-\caption{\label{tab:iris}雷猴啊，iris 数据！}
+\caption{\label{tab:iris}数据表}
 \centering
 \begin{tabular}[t]{rrrrl}
 \toprule
@@ -284,13 +253,11 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 \end{tabular}
 \end{table}
 
-就这样，你可以一直编下去，直到编不下去。
+\chapter{集中和离散趋势}\label{wind}
 
-\chapter{白苹风末}\label{wind}
+描述数据的两个基本指标是集中趋势和离散趋势。
 
-瞎扯几句。
-
-\section{张老爷子}
+\section{集中趋势}
 
 话说张老爷子写了一首诗：
 
@@ -299,7 +266,7 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 红豆江南留梦影，白苹风末唱秋词。
 \end{quote}
 
-\section{彭大将领}
+\section{离散趋势}
 
 貌似大家都喜欢用白萍风这个意境。又如彭玉麟的对联：
 
@@ -315,11 +282,11 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 \appendix \addcontentsline{toc}{chapter}{\appendixname}
 
 
-\chapter{余音绕梁}\label{sound}
+\chapter{后记}\label{sound}
 
 呐，到这里朕的书差不多写完了，但还有几句话要交待，所以开个附录，再啰嗦几句，各位客官稍安勿躁、扶稳坐好。
 
-\bibliography{book.bib,packages.bib}
+\bibliography{book.bib,packages.bib,Statistics.bib}
 
 \backmatter
 \printindex
