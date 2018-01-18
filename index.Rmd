@@ -1,5 +1,5 @@
---- 
-title: "行为科学统计学"
+---
+title: "R语言和统计学"
 author: "战立侃"
 date: "`r Sys.Date()`"
 documentclass: ctexbook
@@ -11,7 +11,7 @@ lot: yes
 lof: yes
 geometry: [b5paper, tmargin=2.5cm, bmargin=2.5cm, lmargin=3.5cm, rmargin=2.5cm]
 site: bookdown::bookdown_site
-description: "一个简单的中文书示例。"
+description: "R语言和统计学"
 github-repo: yihui/bookdown-chinese
 #cover-image: images/cover.jpg
 ---
@@ -33,16 +33,12 @@ lapply(c(), function(pkg) {
 
 我用了两个 R 包编译这本书，分别是 **knitr**\index{knitr} [@xie2015] 和 **bookdown**\index{bookdown} [@R-bookdown]。以下是我的 R 进程信息：
 
-```{r}
-sessionInfo()
-```
 
 ## 致谢 {-}
 
-非常感谢谁谁以及谁谁对我的帮助。艾玛，要不是他们神一样的队友，我两年前就写完这本书了。
+非常感谢我的家人、朋友。
 
 ```{block2, type='flushright', html.tag='p'}
-张三  
-于 A 村某角落
+战立侃
+于北京语言大学
 ```
-
