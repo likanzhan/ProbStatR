@@ -1,9 +1,9 @@
 ---
-title: "R语言和统计学"
+title: "R语言和统计"
 author: "战立侃"
 date: "`r Sys.Date()`"
 documentclass: ctexbook
-bibliography: [book.bib, packages.bib]
+bibliography: [book.bib, packages.bib, Statistics.bib]
 biblio-style: apalike
 link-citations: yes
 colorlinks: yes
@@ -20,7 +20,6 @@ github-repo: yihui/bookdown-chinese
 options(
   htmltools.dir.version = FALSE, formatR.indent = 2, width = 55, digits = 4
 )
-
 # 填上你需要用到的包，如 c('ggplot2', 'dplyr')
 lapply(c(), function(pkg) {
   if (system.file(package = pkg) == '') install.packages(pkg)
@@ -29,16 +28,14 @@ lapply(c(), function(pkg) {
 
 # 前言 {-}
 
-你好，世界。我写了一本书。这本书是这样的，第 \@ref(intro) 章介绍了啥啥，第 \@ref(wind) 章说了啥啥，然后是啥啥……
+2018年，我立了一个flag：我准备写一本书。这本书是关于R语言和统计学的。但是具体写什么，我还没有想好。例如，第 \@ref(intro) 章介绍了啥啥，第 \@ref(wind) 章说了啥啥，然后是啥啥……
 
-我用了两个 R 包编译这本书，分别是 **knitr**\index{knitr} [@xie2015] 和 **bookdown**\index{bookdown} [@R-bookdown]。以下是我的 R 进程信息：
-
+我用了两个 R 包编译这本书，分别是 **knitr**\index{knitr} [@RN193] 和 **bookdown**\index{bookdown} [@RN323]。
 
 ## 致谢 {-}
 
 非常感谢我的家人、朋友。
 
 ```{block2, type='flushright', html.tag='p'}
-战立侃
-于北京语言大学
+战立侃 于北京
 ```
