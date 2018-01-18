@@ -37,5 +37,5 @@ lapply(c(), function(pkg) {
 非常感谢我的父母，我家的大巫、小巫、阿毛的一如寄望的支持。
 
 ```{block2, type='flushright', html.tag='p'}
-战立侃 于北京
+战立侃 2018年写于北京
 ```
