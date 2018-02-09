@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="author-unnumbered.html">
+<link rel="prev" href="intro.html">
+<link rel="next" href="wind.html">
 <script src="libs/jquery/jquery.min.js"></script>
 <link href="libs/gitbook/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
@@ -164,45 +164,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">R语言和统计</h1>
-<h4 class="author"><em>战立侃</em></h4>
-<h4 class="date"><em>2018-02-07</em></h4>
-</div>
-<div id="e5898de8a880" class="section level1 unnumbered">
-<h1>前言</h1>
-<p>2018年，我立了一个大大的FLAG。我准备写一本书。这本书是关于R语言和统计学的。但是具体写什么，我还没有想好。例如，第 <a href="intro.html#intro">2</a> 章介绍了什么是统计学；第 <a href="wind.html#wind">4</a> 章介绍了描述统计中的集中量数和离散量数。</p>
-<p>本书的主要参考书有：行为科学统计学 <span class="citation">(Gravetter and Wallnau <a href="#ref-RN154">2017</a>)</span>、用R学习概率论和数理统计 <span class="citation">(Ugarte, Militino, and Arnholt <a href="#ref-RN261">2016</a>)</span>、应用回归分析和一般化线性模型 <span class="citation">(Fox <a href="#ref-RN146">2016</a>)</span></p>
-<div id="e887b4e8b0a2" class="section level2 unnumbered">
-<h2>致谢</h2>
-<p>非常感谢我的父母，我家的大巫、小巫、阿毛的一如寄望的支持。</p>
-
-<p class="flushright">
-战立侃 2018年于北京
+<div id="colors" class="section level1">
+<h1><span class="header-section-number">第 3 章</span> 常用颜色</h1>
+<ol start="2" style="list-style-type: decimal">
+<li>blue:<code>#005093</code>、<code>#0bb0ae</code></li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">stbc &lt;-<span class="st"> </span><span class="cf">function</span> (x){</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="kw">hist</span>(mtcars<span class="op">$</span>mpg, <span class="dt">main =</span> <span class="st">&quot;&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;MPG&quot;</span>, <span class="dt">col =</span> x)</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">}</a></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:hex005093"></span>
+<img src="probstatr_files/figure-html/hex005093-1.png" alt="005093" width="70%" />
+<p class="caption">
+图 3.1: 005093
 </p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:hex0bb0ae"></span>
+<img src="probstatr_files/figure-html/hex0bb0ae-1.png" alt="00bb0ae" width="70%" />
+<p class="caption">
+图 3.2: 00bb0ae
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>brown: col: <code>#fce6bf</code>; border: <code>#b78135</code>, <code>#ef9d56</code></li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">stbc</span>(<span class="st">&quot;#fce6bf&quot;</span>)</a></code></pre></div>
+<p><img src="probstatr_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">stbc</span>(<span class="st">&quot;#b78135&quot;</span>)</a></code></pre></div>
+<p><img src="probstatr_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">stbc</span>(<span class="st">&quot;#ef9d56&quot;</span>)</a></code></pre></div>
+<p><img src="probstatr_files/figure-html/unnamed-chunk-3-3.png" width="672" />
+4. green: <code>#00acaa</code>, <code>#2aa96d</code></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">stbc</span>(<span class="st">&quot;#00acaa&quot;</span>)</a></code></pre></div>
+<p><img src="probstatr_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">stbc</span>(<span class="st">&quot;#2aa96d&quot;</span>)</a></code></pre></div>
+<p><img src="probstatr_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li>red: <code>#cf232a</code>, <code>#d5493a</code></li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">stbc</span>(<span class="st">&quot;#cf232a&quot;</span>)</a></code></pre></div>
+<p><img src="probstatr_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">stbc</span>(<span class="st">&quot;#d5493a&quot;</span>)</a></code></pre></div>
+<p><img src="probstatr_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
 
-
-</div>
-</div>
-<h3>参考文献</h3>
-<div id="refs" class="references">
-<div id="ref-RN154">
-<p>Gravetter, Frederick J, and Larry B. Wallnau. 2017. <em>Statistics for the Behavioral Sciences</em>. Book. 10th ed. Wadsworth.</p>
-</div>
-<div id="ref-RN261">
-<p>Ugarte, Maíra Dolores, Ana F. Militino, and Alan T. Arnholt. 2016. <em>Probability and Statistics with R</em>. Book. 2nd ed. Boca Raton, UK: CRC Press.</p>
-</div>
-<div id="ref-RN146">
-<p>Fox, John. 2016. <em>Applied Regression Analysis and Generalized Linear Models</em>. Book. 3rd ed. Thousand Oaks, CA: SAGE.</p>
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="author-unnumbered.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="wind.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook/js/app.min.js"></script>
@@ -232,7 +243,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/likanzhan/probstatr/edit/master/index.Rmd",
+"link": "https://github.com/likanzhan/probstatr/edit/master/02-Colors.Rmd",
 "text": "编辑"
 },
 "download": ["probstatr.pdf", "probstatr.epub"],

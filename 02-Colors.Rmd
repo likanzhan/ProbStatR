@@ -1,0 +1,35 @@
+# 常用颜色 {#colors}
+
+
+2. blue:`#005093`、`#0bb0ae`
+```{r}
+stbc <- function (x){
+  hist(mtcars$mpg, main = "", xlab = "MPG", col = x)
+}
+```
+
+```{r hex005093, echo = FALSE, fig.cap='005093', out.width='70%', fig.align="center"}
+stbc("#005093")
+```
+
+```{r hex0bb0ae, echo = FALSE, fig.cap='00bb0ae', out.width='70%', fig.align="center"}
+stbc("#0bb0ae")
+```
+
+3. brown: col:  `#fce6bf`; border:  `#b78135`, `#ef9d56`
+```{r}
+stbc("#fce6bf")
+stbc("#b78135")
+stbc("#ef9d56")
+```
+4. green: `#00acaa`, `#2aa96d`
+```{r}
+stbc("#00acaa")
+stbc("#2aa96d")
+```
+
+5. red: `#cf232a`, `#d5493a`
+```{r}
+stbc("#cf232a")
+stbc("#d5493a")
+```
