@@ -2,6 +2,7 @@
 title: "R语言和统计"
 author: "战立侃"
 date: "`r Sys.Date()`"
+# documentclass: krantz
 documentclass: ctexbook
 bibliography: [book.bib, packages.bib, Statistics.bib]
 biblio-style: apalike
@@ -34,7 +35,7 @@ lapply(c(), function(pkg) {
 
 ## 致谢 {-}
 
-非常感谢我的父母，我家的大巫、小巫、阿毛的一如寄望的支持。
+非常感谢我的父母，我家的大巫、小巫、阿毛的一如继往的支持。
 
 ```{block2, type='flushright', html.tag='p'}
 战立侃 2018年于北京

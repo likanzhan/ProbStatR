@@ -1,0 +1,60 @@
+\mainmatter
+
+# 统计作图 {#Plot}
+
+```{r, label = "Figure_03_01", echo = FALSE, eval = TRUE, fig.align = "center", dpi = 300, fig.width = 10, fig.height = 6}
+x <- -4:4; y <- x^2 # Create two vectors x and y
+# Create figure margins of 5.1 lines for all four sides, create outer  
+# margins of 2.1 lines for all sides, set back ground color to grey90
+par(mar = rep(5, 4) + 0.1, oma = rep(2, 4) + 0.1, bg = "grey90") 
+plot(x, y, type = "n")              # Creates empty plot
+box("outer")                        # draws outer box
+par(xpd = TRUE)                     # clipping set to figure region
+rect(-7, -6, 7, 23, col = "grey95") # large rectangle (figure region)  
+box("figure") 
+par(xpd = FALSE)                    # clipping set back to plot region
+rect(-7, -6, 7, 23, col = "grey90") # large rectangle (plot region) 
+box("plot")                         # draws box around plot region
+axis(side = 1)                      # add axis to bottom
+axis(side = 2)                      # add axis to left side
+# label sides
+mtext(text = paste("Side", 1:4), side = 1:4, line = -1.5, cex = 1.5) 
+# label outer margins
+mtext(text = paste("Outer Margin", 1:4), side = 1:4, line = 0.5, cex=1.5, outer = TRUE, col="blue") 
+# label Figure Region
+mtext(text = "Figure Region", side = 3, at = 4, line = 2, cex = 2, col = "gray40")
+# show Lines -1 to 4 at x = -3 for sides 1 and 3 (bottom & top)
+for(side in c(1, 3))
+ mtext(text = paste("Line", -1:4), side = side, line = -1:4, at = -3, col = "red")
+# show Lines -1 to 4 at y = 2.5 for sides 2 and 4 (left & right)
+for(side in c(2, 4)) 
+ mtext(text = paste("Line", -1:4), side = side, line = -1:4, at = 2.5, col = "red")
+# show Lines -1 to 1 at 0.8 of y axis in outer margins for all sides for(side in 1:4)
+ mtext(text = paste("Line", -1:1), side = side, at = 0.8,
+       line = -1:2, col = "blue", outer = TRUE)
+# "Plot Region" placed at 0, 12
+text(x = 0, y = 12, "Plot Region", cex = 3, col = "gray40") 
+# Red solid circle placed at 0, 4
+points(x = 0, y = 4, pch = 19, col = "red", cex = 2)
+# "(0, 4)" placed centered (0.5) and 2 lines below 0, 4
+text(x = 0, y = 4, "(0, 4)", adj = c(0.5, 2), cex = 1.5)
+# text with math symbols created with expression placed at (0, 7.5)
+text(x = 0, y = 7.5, expression(paste("Some Math: ", bar(x)==
+     sum(frac(x[i], n), i==1, n))), cex = 1.5, col = "blue")
+# "x-label" placed at side 1 (bottom) line 3 of figure margin
+mtext(text = "x-label", side = 1, line = 3)
+# "subtitle" placed at side 1 (bottom) line 4 of figure margin
+mtext(text = "subtitle", side = 1, line = 4)
+# "y-label" placed at side 3 (top) line 3 of figure margin
+mtext(text = "y-label", side = 2, line = 3)
+# "Title" placed at side 3 (top) line 2 of figure margin
+mtext(text = "Title", side = 3, line = 2, cex = 1.25)
+# "0%" placed at side 3 (top) line 0.5 at x = 0 of outer margin
+mtext(text = "0%", side = 3, line = 0.5, outer = TRUE, at = 0)
+# "100%" placed at side 3 (top) line 0.5 at x = 1 of outer margin
+mtext(text = "100%", side = 3, line = 0.5, outer = TRUE, at = 1)
+# "(line = 2, at = 5)" placed at side 1 (bottom) line 2 of figure margin  
+mtext(text = "(line = 2, at = 4.5)", side = 1, line = 2, at = 4.5)
+# "(line = 0.5, at = 0.2)" placed at x = 0.2 on side 1 (bottom) line 0.5  # of the outer margin
+mtext(text = "(line = 0.5, at = 0.2)", side = 1, line = 0.5, at = 0.2, outer = TRUE)
+```
